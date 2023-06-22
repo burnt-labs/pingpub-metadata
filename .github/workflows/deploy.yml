@@ -36,14 +36,14 @@ jobs:
       - name: Update submodule
         run:  /usr/bin/git submodule foreach git pull origin master
       - name: 'Build'
-        run: cd explorer && yarn build
+        run: cd explorer && yarn add build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './explorer'
+          path: './explorer/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
