@@ -35,10 +35,10 @@ jobs:
           submodules: true
       - name: Update submodule
         run:  git submodule foreach git pull origin master
+      - name: 'Merge Configs'
+        run: cp -r chains explorer
       - name: 'Build'
         run: cd explorer && yarn && yarn build      
-      - name: 'List'
-        run: ls explorer
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
