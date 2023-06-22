@@ -34,7 +34,7 @@ jobs:
       - name: Update submodule
         run: git submodule foreach git pull origin master
       - name: 'list'
-        run: ls
+        run: ls explorer
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
