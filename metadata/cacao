@@ -1,0 +1,1 @@
+{"description":"The native token of Maya Protocol","denom_units":[{"denom":"cacao","exponent":0},{"denom":"CACAO","exponent":10}],"base":"cacao","name":"Cacao","display":"CACAO","symbol":"CACAO","images":[{"svg":"https://raw.githubusercontent.com/cosmos/chain-registry/master/mayachain/images/cacao.svg","theme":{}}],"coingecko_id":"cacao","keywords":["dex"]}

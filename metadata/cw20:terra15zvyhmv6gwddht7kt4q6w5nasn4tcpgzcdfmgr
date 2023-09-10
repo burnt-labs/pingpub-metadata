@@ -1,0 +1,1 @@
+{"denom_units":[{"denom":"cw20:terra15zvyhmv6gwddht7kt4q6w5nasn4tcpgzcdfmgr","exponent":0},{"denom":"gtps","exponent":18}],"type_asset":"cw20","address":"terra15zvyhmv6gwddht7kt4q6w5nasn4tcpgzcdfmgr","base":"cw20:terra15zvyhmv6gwddht7kt4q6w5nasn4tcpgzcdfmgr","name":"Global Transaction Payment Solut","display":"gtps","symbol":"GTPS"}

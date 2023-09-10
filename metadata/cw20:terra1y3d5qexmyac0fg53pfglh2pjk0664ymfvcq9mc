@@ -1,0 +1,1 @@
+{"denom_units":[{"denom":"cw20:terra1y3d5qexmyac0fg53pfglh2pjk0664ymfvcq9mc","exponent":0},{"denom":"whgtps","exponent":8}],"type_asset":"cw20","address":"terra1y3d5qexmyac0fg53pfglh2pjk0664ymfvcq9mc","base":"cw20:terra1y3d5qexmyac0fg53pfglh2pjk0664ymfvcq9mc","name":"Global Transaction Payment Solu","display":"whgtps","symbol":"whGTPS"}

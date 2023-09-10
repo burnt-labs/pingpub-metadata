@@ -1,0 +1,1 @@
+{"denom_units":[{"denom":"reth-wei","exponent":0,"aliases":["0xae78736cd615f374d3085123a210448e74fc6393"]},{"denom":"reth","exponent":18}],"base":"reth-wei","name":"Rocket Pool Ether","display":"reth","symbol":"rETH","traces":[{"type":"bridge","counterparty":{"chain_name":"ethereum","base_denom":"0xae78736cd615f374d3085123a210448e74fc6393"},"provider":"Axelar"}]}

@@ -1,0 +1,1 @@
+{"description":"A liquid staking representation of staked IRISs","denom_units":[{"denom":"uriris","exponent":0},{"denom":"riris","exponent":6}],"base":"uriris","name":"rIRIS","display":"riris","symbol":"rIRIS","logo_URIs":{"svg":"https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/riris.svg"},"coingecko_id":""}

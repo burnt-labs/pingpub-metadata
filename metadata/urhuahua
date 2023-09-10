@@ -1,0 +1,1 @@
+{"description":"A liquid staking representation of staked HUAHUAs","denom_units":[{"denom":"urhuahua","exponent":0},{"denom":"rhuahua","exponent":6}],"base":"urhuahua","name":"rHUAHUA","display":"rhuahua","symbol":"rHUAHUA","logo_URIs":{"svg":"https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/rhuahua.svg"},"coingecko_id":""}
