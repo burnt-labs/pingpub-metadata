@@ -1,0 +1,1 @@
+{"denom_units":[{"denom":"sfrxeth-wei","exponent":0,"aliases":["0xac3e018457b222d93114458476f3e3416abbe38f"]},{"denom":"sfrxeth","exponent":18}],"base":"sfrxeth-wei","name":"Staked Frax Ether","display":"sfrxeth","symbol":"sfrxETH","traces":[{"type":"bridge","counterparty":{"chain_name":"ethereum","base_denom":"0xac3e018457b222d93114458476f3e3416abbe38f"},"provider":"Axelar"}]}
