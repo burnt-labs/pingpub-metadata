@@ -27,50 +27,44 @@ const client = new ChainRegistryClient()
 
 // });
 
-// describe('Generate Token Metadata For IBC', async () => {
+describe('Generate Token Metadata For IBC', async () => {
 
-//     const chains = await client.fetchChainNames()
-//     expect(chains).not.toBeNull()
+    const chains = await client.fetchChainNames()
+    expect(chains).not.toBeNull()
 
-//     test.each(chains.filter(x => x !== 'testnets'))('load chain config (%s)', async (name) => {
-//         expect(name).not.toBeNull()
-//         const conf = await client.fetchChainInfo(name)
-//         expect(conf.apis?.rest).not.toBeNull()
+    test.each(chains.filter(x => x !== 'testnets'))('load chain config (%s)', async (name) => {
+        expect(name).not.toBeNull()
+        const conf = await client.fetchChainInfo(name)
+        expect(conf.apis?.rest).not.toBeNull()
 
-//         const endpoint = conf.apis?.rest
-//         expect(endpoint).not.toBeUndefined()
-//         if (endpoint) {
-//             const address = endpoint[0].address
-//             expect(address).not.toBeUndefined()
-//             console.log(address + '/ibc/apps/transfer/v1/denom_traces?pagination.limit=1000')
-//             const resp = await fetch(address + '/ibc/apps/transfer/v1/denom_traces?pagination.limit=1000')
-//             expect(resp.ok).toBeTruthy()
-//             const traces: {
-//                 denom_traces: {
-//                     path: string,
-//                     base_denom: string
-//                 }[]
-//             } = await resp.json()
-//             expect(traces.denom_traces).not.toBeNull()
-//             traces.denom_traces.forEach((trace) => {
-//                 const denom = trace.base_denom
-//                 if(fs.existsSync(`metadata/${denom}`)) {
-//                     const data = fs.readFileSync(`metadata/${denom}`, 'utf8');
-//                     const metadata = JSON.parse(data)
-//                     if(metadata.base === denom){
-//                         const hash = sha256(`${trace.path}/${trace.base_denom}`).toUpperCase()
-//                         fs.writeFile(`metadata/${hash}`, data, 'utf8', () => { })
-//                     }
-//                 }
-//             })
-//         }
+        const endpoint = conf.apis?.rest
+        expect(endpoint).not.toBeUndefined()
+        if (endpoint) {
+            const address = endpoint[0].address
+            expect(address).not.toBeUndefined()
+            // console.log(address + '/ibc/apps/transfer/v1/denom_traces?pagination.limit=1000')
+            const resp = await fetch(address + '/ibc/apps/transfer/v1/denom_traces?pagination.limit=1000')
+            expect(resp.ok).toBeTruthy()
+            const traces: {
+                denom_traces: {
+                    path: string,
+                    base_denom: string
+                }[]
+            } = await resp.json()
+            expect(traces.denom_traces).not.toBeNull()
+            traces.denom_traces.forEach((trace) => {
+                const denom = trace.base_denom
+                if(fs.existsSync(`dist/metadata/${denom}`)) {
+                    const data = fs.readFileSync(`dist/metadata/${denom}`, 'utf8');
+                    const metadata = JSON.parse(data)
+                    if(metadata.base === denom){
+                        const hash = sha256(`${trace.path}/${trace.base_denom}`).toUpperCase()
+                        fs.writeFile(`dist/metadata/${hash}`, data, 'utf8', () => { })
+                    }
+                }
+            })
+        }
 
-//     })
+    })
 
-// });
-
-test('fetch denom', async () => {
-    const resp = await fetch("https://static.ping.pub/uatom")
-    const content = await resp.json()
-    console.log(content)
-})
+});
