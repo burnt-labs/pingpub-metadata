@@ -1,0 +1,1 @@
+{"description":"A liquid staking representation of staked ATOMs","denom_units":[{"denom":"uratom","exponent":0},{"denom":"ratom","exponent":6}],"base":"uratom","name":"rATOM","display":"ratom","symbol":"rATOM","logo_URIs":{"svg":"https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/ratom.svg"},"coingecko_id":""}
